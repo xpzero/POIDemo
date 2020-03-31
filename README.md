@@ -2,7 +2,7 @@
 Java使用POI读取试题的docx文件
 
 ## 一、准备的docx文件模板样式
-![demo注意事项](src/main/resources/demo.png)
+![demo注意事项](./src/main/resources/demo.png)
 文件中的文字挨着左边写，要是有缩进/空格之类的字符在，poi读取时不好匹配到想要的数据。
 ## 二、引入poi依赖
 ```xml
