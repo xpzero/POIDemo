@@ -37,7 +37,9 @@ public class POIDemo {
             // 正则匹配
             Matcher matcher = pattern.matcher(trim);
             Matcher matcher1 = pattern2.matcher(trim);
-            if (matcher.matches()) {// 匹配到了问题描述
+            if (matcher1.matches()) {// 匹配到了试卷标题名
+                System.out.println("试题名："+trim);
+            } else if (matcher.matches()) {// 匹配到了问题描述
                 singleChoice.setQuestion(trim);
             } else if (trim.startsWith("A")) {
                 singleChoice.setOptionA(trim);
@@ -56,8 +58,6 @@ public class POIDemo {
                 list.add(singleChoice);
                 // 3. 将实体类中的数据清空,在这个for循环中载入新数据
                 singleChoice = new SingleChoice();
-            } else if (matcher1.matches()) {// 匹配到了试卷标题名
-                System.out.println("试题名："+trim);
             }
         }
         System.out.println(list.size()+"----读取内容----"+list.toString());
